@@ -150,7 +150,7 @@ public class Jogo {
 		    
 		    //Salvando o Arquivo csv novo
 		    
-		    String arquivoDestinoStr = "C:/Users/jvcgu/JogoOrdenadoAtividade/JogoOrdenado/jogos/JogoDesordenado/JogoOrdenado.csv";
+		    String arquivoDestinoStr = "C:/Users/jvcgu/JogoOrdenadoAtividade/JogoOrdenado/jogos/JogoOrdenado/JogoOrdenado.csv";
 		    try(BufferedWriter bw = new BufferedWriter(new FileWriter(arquivoDestinoStr))){
                 for(Item item : listItensOrdPorJogo){
                     bw.write(item.getNomeJogo()+","+item.getCategoria()+","+item.getAvaliacao());
