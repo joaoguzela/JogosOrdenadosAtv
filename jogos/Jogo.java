@@ -21,7 +21,7 @@ public class Jogo {
 	 public static void run() {
 		   //Lista para ordenar por categoria
 	        List<Item> listItens = new ArrayList<>();
-	      //Lista para ordenar por avaliação
+	      //Lista para ordenar por avaliaÃ§Ã£o
 	        List<Item> listItensOrdPorCat = new ArrayList<>();
 	      //Lista para ordenar por nome jogo
 	        List<Item> listItensOrdPorJogo = new ArrayList<>();
@@ -51,7 +51,7 @@ public class Jogo {
 		        
 		        int n = listItens.size()-1;    
 		        Item temp;
-		        //Ordenaçõ por categoria
+		        //OrdenaÃ§Ãµ por categoria
 		        for (int i = 0; i < n; i++) {
 			          for (int j = i + 1; j <= n ; j++) {
 			        	  Item itemOrd = listItens.get(i); 
@@ -72,7 +72,7 @@ public class Jogo {
 		        
 		        
 		      
-		      //Ordenaçõ por Avaliação em ordem decrescente
+		      //OrdenaÃ§Ãµ por AvaliaÃ§Ã£o em ordem decrescente
 		        for (int a = 0; a < n; a++) {       
 			          for (int b = a + 1; b <= n ; b++) {
 			        	  Item itemOrd = listItensOrdPorCat.get(a); 
@@ -94,8 +94,6 @@ public class Jogo {
 			        	  
 		            }
 			          
-			        //Ordenaçõ por nome do jogo
-			          listItensOrdPorJogo = listItensOrdPorCat;
 				        for (int t = 0; t < n; t++) {       
 					          for (int u = t + 1; u <= n ; u++) {
 					        	  Item itemOrd = listItensOrdPorJogo.get(t); 
@@ -152,7 +150,7 @@ public class Jogo {
 		    
 		    String arquivoDestinoStr = "C:/Users/jvcgu/JogoOrdenadoAtividade/JogoOrdenado/jogos/JogoOrdenado/JogoOrdenado.csv";
 		    try(BufferedWriter bw = new BufferedWriter(new FileWriter(arquivoDestinoStr))){
-                for(Item item : listItensOrdPorJogo){
+                for(Item item : listItensOrdPorCat){
                     bw.write(item.getNomeJogo()+","+item.getCategoria()+","+item.getAvaliacao());
                     bw.newLine();
                 }
